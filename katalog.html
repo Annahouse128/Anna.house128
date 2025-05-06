@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Produk - Anna House 128</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdf6e3;
+      color: #013220;
+      padding: 20px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #2e8b57;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #2e8b57;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .produk {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #2e8b57;
+      border-radius: 8px;
+      background-color: #e6f4ea;
+      font-size: 16px;
+    }
+
+    .produk:hover {
+      background-color: #d0e8d0;
+    }
+
+    .info {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #2e8b57;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 2px solid #000;
+    }
+
+    details {
+      width: 100%;
+      max-width: 400px;
+      margin-top: 20px;
+      padding: 10px;
+      border: 2px solid #2e8b57;
+      border-radius: 8px;
+      background-color: #e6f4ea;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function cariProduk() {
+      let input = document.getElementById('searchInput').value.toLowerCase();
+      let produkList = document.getElementsByClassName('produk');
+      for (let i = 0; i < produkList.length; i++) {
+        let nama = produkList[i].innerText.toLowerCase();
+        produkList[i].style.display = nama.includes(input) ? '' : 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Katalog Produk</h1>
+  <input type="text" id="searchInput" onkeyup="cariProduk()" placeholder="Cari produk...">
+  
+  <div class="produk">Sosis Ayam - Rp20.000</div>
+  <div class="produk">Nugget Ikan - Rp25.000</div>
+  <div class="produk">Bakso Sapi - Rp22.000</div>
+  <div class="produk">Kaki Naga - Rp18.000</div>
+  <div class="produk">Tempura - Rp23.000</div>
+  
+  <details>
+    <summary>Potongan harga</summary>
+    <p>Setiap pembelian dengan total Rp.. mendapat potongan ..%</p>
+  </details>
+
+  <div class="info">
+    <p>Info lebih lengkap kunjungi toko kami atau hubungi admin:</p>
+    <a class="whatsapp-btn" href="https://wa.me/6281229725526" target="_blank">WhatsApp</a>
+  </div>
+</body>
+</html>

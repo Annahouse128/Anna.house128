@@ -1,64 +1,122 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anna House 128</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fdf6e3; /* krem */
-      color: #013220; /* hijau tua */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-    h1 {
-      margin-bottom: 0.2em;
+<!DOCTYPE html>  
+<html lang="id">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Anna House 128</title>  
+  <style>  
+    body {  
+      margin: 0;  
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+      background-color: #fdf6e3;  
+      color: #013220;  
+      display: flex;  
+      flex-direction: column;  
+      align-items: center;  
+      justify-content: center;  
+      height: 100vh;  
+      overflow: hidden;  
+      position: relative;  
+    }  
+
+    h1 {  
+      margin-bottom: 0.2em;  
+      animation: fadeIn 1.2s ease-in-out;  
+    }  
+  
+    h2 {  
+      margin-top: 0;  
+      color: #2e8b57;  
+      animation: fadeIn 1.8s ease-in-out;  
+    }  
+  
+    .menu {  
+      margin-top: 2em;  
+      display: flex;  
+      flex-direction: column;  
+      gap: 1em;  
+      width: 80%;  
+      max-width: 400px;  
+      animation: fadeInUp 2s ease-in-out;  
+    }  
+  
+    .menu a {  
+      text-decoration: none;  
+      background-color: #2e8b57;  
+      color: #fff;  
+      padding: 1em;  
+      text-align: center;  
+      border-radius: 10px;  
+      border: 2px solid #000;  
+      transition: background-color 0.3s ease, transform 0.2s;  
+    }  
+  
+    .menu a:hover {  
+      background-color: #013220;  
+      transform: scale(1.05);  
     }
 
-    h2 {
-      margin-top: 0;
-      color: #2e8b57; /* hijau muda */
+    img {  
+      animation: fadeIn 1s ease-in-out;  
+    }  
+
+    /* Animations */  
+    @keyframes fadeIn {  
+      from { opacity: 0; transform: translateY(-20px); }  
+      to { opacity: 1; transform: translateY(0); }  
     }
 
-    .menu {
-      margin-top: 2em;
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      width: 80%;
-      max-width: 400px;
+    @keyframes fadeInUp {  
+      from { opacity: 0; transform: translateY(30px); }  
+      to { opacity: 1; transform: translateY(0); }  
     }
 
-    .menu a {
-      text-decoration: none;
-      background-color: #2e8b57; /* hijau muda */
-      color: #fff;
-      padding: 1em;
-      text-align: center;
-      border-radius: 10px;
-      border: 2px solid #000; /* hitam sebagai garis tepi */
-      transition: background-color 0.3s ease;
+    /* Bling Bling background */  
+    .bling {  
+      position: absolute;  
+      top: 0;  
+      left: 0;  
+      width: 100%;  
+      height: 100%;  
+      pointer-events: none;  
+      overflow: hidden;  
     }
 
-    .menu a:hover {
-      background-color: #013220; /* hijau tua */
+    .bling span {  
+      position: absolute;  
+      width: 5px;  
+      height: 5px;  
+      background: #ffd700;  
+      border-radius: 50%;  
+      animation: sparkle 3s linear infinite;  
+      opacity: 0.6;  
     }
-  </style>
-</head>
-<body>
-  <img src="logoo.png" alt="Logo Anna House 128" style="width: 120px; height: 120px; margin-bottom: 1em">
-  <h1>Anna House 128</h1>
-  <h2>Frozen Food</h2>
-  <div class="menu">
-    <a href="https://wa.me/6289505975625" target="_blank">WhatsApp</a>
-    <a href="https://maps.app.goo.gl/KgvwopEnZZfGBPh7A" target="_blank">Maps</a>
-    <a href="https://www.instagram.com/anna_house128?igsh=MTExanhoaWE4a3o1Ng==" target="_blank">Instagram</a>
-    <a href="katalog.html">Katalog</a>
+
+    @keyframes sparkle {  
+      0% { transform: translateY(0) scale(1); opacity: 0.6; }  
+      50% { opacity: 1; }  
+      100% { transform: translateY(100vh) scale(0.5); opacity: 0; }  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="bling">
+    <span style="left: 10%; animation-delay: 0s;"></span>
+    <span style="left: 25%; animation-delay: 1s;"></span>
+    <span style="left: 40%; animation-delay: 2s;"></span>
+    <span style="left: 60%; animation-delay: 0.5s;"></span>
+    <span style="left: 75%; animation-delay: 1.5s;"></span>
+    <span style="left: 90%; animation-delay: 2.5s;"></span>
   </div>
-</body>
+
+  <img src="logoo.png" alt="Logo Anna House 128" style="width: 120px; height: 120px; margin-bottom: 1em">  
+  <h1>Anna House 128</h1>  
+  <h2>Frozen Food</h2>  
+  <div class="menu">  
+    <a href="https://wa.me/6289505975625" target="_blank">WhatsApp</a>  
+    <a href="https://maps.app.goo.gl/KgvwopEnZZfGBPh7A" target="_blank">Maps</a>  
+    <a href="https://www.instagram.com/anna_house128?igsh=MTExanhoaWE4a3o1Ng==" target="_blank">Instagram</a>  
+    <a href="kataloog.html">Katalog</a>  
+  </div>  
+</body>  
 </html>
